@@ -1,0 +1,10 @@
+To compile a version of Camel 3.18.1 with the extra logging, download its source and setup Maven etc
+
+Then place the two files in ./components/camel-jms/... in the same place in the Camel source tree
+
+Camel 3.18.1 compiled on Ubuntu 20.04 with Java 11.0.16
+
+You may need to comment out the <module>docs</module> line in the master Camel pom.xml
+
+See the log4j2.properties file in the CamelRouter app to see how log msgs are written
+DEBUG level will output the propertyNames array of every message while INFO will only log messages with problems

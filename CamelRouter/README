@@ -1,0 +1,20 @@
+To recreate the executable JAR, first compile Camel 3.18.1 (see Camel/ directory), then
+
+"mvn package" creates an executable JAR ( target/CamelRouter.jar )
+This runs a Camel class that reads the XML file with Camel route info
+
+See "https://github.com/apache/camel/blob/main/components/camel-spring-main/src/main/java/org/apache/camel/spring/Main.java"
+
+src/main/resources/log4j2.properties is the logging configuration
+
+nrfeeds.log is general log messages
+nrfeeds.msgs.log is the log msgs from JmsBinding.java
+
+========
+
+"java -jar CamelRouter.jar -h" for help
+
+java -jar CamelRouter.jar -fa <camel context XML file, eg. TEST-td-trust.xml>
+
+TEST-td-trust.xml needs to be edited to set account information, file paths, etc
+

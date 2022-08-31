@@ -1,0 +1,60 @@
+[INFO ] 2022-08-30 13:27:52.861 [main] MainSupport - Apache Camel (Main) 3.18.1 is starting
+[INFO ] 2022-08-30 13:27:53.805 [main] AbstractCamelContext - Apache Camel 3.18.1 (camel-1) is starting
+[INFO ] 2022-08-30 13:27:53.996 [ActiveMQ Task-1] FailoverTransport - Successfully connected to tcp://datafeeds.networkrail.co.uk:61619?wireFormat.maxInactivityDuration=30000
+[INFO ] 2022-08-30 13:27:54.026 [ActiveMQ Task-1] FailoverTransport - Successfully connected to tcp://datafeeds.networkrail.co.uk:61619?wireFormat.maxInactivityDuration=30000
+[INFO ] 2022-08-30 13:27:54.182 [main] AbstractCamelContext - Routes startup (started:1)
+[INFO ] 2022-08-30 13:27:54.188 [main] AbstractCamelContext -     Started td (ntrod://topic:TD_ALL_SIG_AREA)
+[INFO ] 2022-08-30 13:27:54.188 [main] AbstractCamelContext - Apache Camel 3.18.1 (camel-1) started in 510ms (build:32ms init:95ms start:383ms)
+
+[ERROR] 2022-08-30 15:27:34.607 [Camel (camel-1) thread #1 - JmsConsumer[TD_ALL_SIG_AREA]] JmsBinding - NROD: jms headers: {JMSType=null, JMSMessageID=ID:opendata-backend.rockshore.net-36329-1661552313052-11:1:1:5:88187, JMSExpiration=1661869954583, JMSRedelivered=false, JMSTimestamp=1661869654583, JMSXUserID=null, JMSDeliveryMode=2, JMSPriority=4, JMSReplyTo=null, JMSXGroupID=null, JMSDestination=topic://TD_ALL_SIG_AREA, JMSCorrelationIDAsBytes=null, JMSCorrelationID=null}
+
+[ERROR] 2022-08-30 15:27:34.608 [Camel (camel-1) thread #1 - JmsConsumer[TD_ALL_SIG_AREA]] JmsBinding - NROD: body: [{"SF_MSG":{"time":"1661869654000","area_id":"TW","address":"3B","msg_type":"SF","data":"00"}},{"SF_MSG":{"time":"1661869654000","area_id":"NX","address":"00","msg_type":"SF","data":"40"}},{"SF_MSG":{"time":"1661869654000","area_id":"CC","address":"01","msg_type":"SF","data":"04"}},{"CA_MSG":{"to":"3286","time":"1661869654000","area_id":"CV","msg_type":"CA","from":"3288","descr":"2D46"}},{"SF_MSG":{"time":"1661869654000","area_id":"NM","address":"2F","msg_type":"SF","data":"20"}},{"SF_MSG":{"time":"1661869654000","area_id":"C2","address":"BF","msg_type":"SF","data":"20"}},{"CB_MSG":{"time":"1661869654000","area_id":"EB","msg_type":"CB","from":"R473","descr":"2H36"}},{"SF_MSG":{"time":"1661869654000","area_id":"LC","address":"10","msg_type":"SF","data":"C3"}},{"CA_MSG":{"to":"0555","time":"1661869654000","area_id":"SS","msg_type":"CA","from":"0553","descr":"2N35"}},{"SF_MSG":{"time":"1661869654000","area_id":"Q3","address":"35","msg_type":"SF","data":"4F"}},{"CT_MSG":{"time":"1661869654000","area_id":"WE","msg_type":"CT","report_time":"1252"}},{"CA_MSG":{"to":"0055","time":"1661869654000","area_id":"TB","msg_type":"CA","from":"0051","descr":"1H38"}},{"SF_MSG":{"time":"1661869654000","area_id":"WI","address":"84","msg_type":"SF","data":"5A"}},{"SF_MSG":{"time":"1661869654000","area_id":"D9","address":"36","msg_type":"SF","data":"17"}},{"CA_MSG":{"to":"0486","time":"1661869654000","area_id":"PB","msg_type":"CA","from":"0494","descr":"1Y86"}},{"CA_MSG":{"to":"5302","time":"1661869654000","area_id":"R2","msg_type":"CA","from":"5304","descr":"1Y26"}},{"SF_MSG":{"time":"1661869654000","area_id":"M3","address":"07","msg_type":"SF","data":"E9"}},{"CT_MSG":{"time":"1661869654000","area_id":"LA","msg_type":"CT","report_time":"1518"}},{"SF_MSG":{"time":"1661869654000","area_id":"T3","address":"24","msg_type":"SF","data":"18"}},{"SF_MSG":{"time":"1661869654000","area_id":"R1","address":"63","msg_type":"SF","data":"40"}},{"SF_MSG":{"time":"1661869654000","area_id":"EK","address":"02","msg_type":"SF","data":"E5"}},{"SF_MSG":{"time":"1661869655000","area_id":"D3","address":"1F","msg_type":"SF","data":"40"}},{"SF_MSG":{"time":"1661869654000","area_id":"WI","address":"8F","msg_type":"SF","data":"90"}},{"SF_MSG":{"time":"1661869654000","area_id":"Q1","address":"68","msg_type":"SF","data":"FF"}},{"SG_MSG":{"time":"1661869654000","area_id":"AL","address":"28","msg_type":"SG","data":"00000000"}},{"SF_MSG":{"time":"1661869654000","area_id":"X7","address":"20","msg_type":"SF","data":"1D"}},{"SF_MSG":{"time":"1661869654000","area_id":"ME","address":"4D","msg_type":"SF","data":"19"}},{"CA_MSG":{"to":"6232","time":"1661869654000","area_id":"T3","msg_type":"CA","from":"6234","descr":"2I01"}},{"CA_MSG":{"to":"0012","time":"1661869654000","area_id":"ED","msg_type":"CA","from":"0014","descr":"1R80"}},{"SF_MSG":{"time":"1661869654000","area_id":"CH","address":"07","msg_type":"SF","data":"00"}},{"SF_MSG":{"time":"1661869655000","area_id":"MP","address":"08","msg_type":"SF","data":"00"}},{"SF_MSG":{"time":"1661869655000","area_id":"C2","address":"67","msg_type":"SF","data":"F7"}}]
+
+[ERROR] 2022-08-30 15:27:34.609 [Camel (camel-1) thread #1 - JmsConsumer[TD_ALL_SIG_AREA]] JmsBinding - NROD: propertyNames: [0, 0, 0, 1]
+
+[ERROR] 2022-08-30 15:27:34.622 [Camel (camel-1) thread #1 - JmsConsumer[TD_ALL_SIG_AREA]] DefaultErrorHandler - Failed delivery for (MessageId: ID:opendata-backend.rockshore.net-36329-1661552313052-11:1:1:5:88187 on ExchangeId: 4F92CA2013668DA-0000000000000000). Exhausted after delivery attempt: 1 caught: org.apache.camel.RuntimeCamelException: javax.jms.JMSException: java.io.EOFException
+
+Message History (source location and message history is disabled)
+---------------------------------------------------------------------------------------------------------------------------------------
+Source                                   ID                             Processor                                          Elapsed (ms)
+                                         td/td                          from[ntrod://topic:xxxxxx@douglas-fraser.com3TEST&           16
+	...
+                                         td/to1                         file:/tmp/testfeeds/td/?fileName=./test-td.json&fi            0
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+org.apache.camel.RuntimeCamelException: javax.jms.JMSException: java.io.EOFException
+	at org.apache.camel.component.jms.JmsBinding.extractHeadersFromJms(JmsBinding.java:233) ~[CamelRouter.jar:?]
+	at org.apache.camel.component.jms.JmsMessage.populateInitialHeaders(JmsMessage.java:244) ~[CamelRouter.jar:?]
+	at org.apache.camel.support.DefaultMessage.createHeaders(DefaultMessage.java:331) ~[CamelRouter.jar:?]
+	at org.apache.camel.component.jms.JmsMessage.ensureInitialHeaders(JmsMessage.java:229) ~[CamelRouter.jar:?]
+	at org.apache.camel.component.jms.JmsMessage.getHeaders(JmsMessage.java:186) ~[CamelRouter.jar:?]
+	at org.apache.camel.component.jms.EndpointMessageListener.onMessage(EndpointMessageListener.java:92) [CamelRouter.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:736) [CamelRouter.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:696) [CamelRouter.jar:?]
+	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:674) [CamelRouter.jar:?]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:331) [CamelRouter.jar:?]
+	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:270) [CamelRouter.jar:?]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1237) [CamelRouter.jar:?]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1227) [CamelRouter.jar:?]
+	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:1120) [CamelRouter.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+Caused by: javax.jms.JMSException: java.io.EOFException
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:80) ~[CamelRouter.jar:?]
+	at org.apache.activemq.command.ActiveMQMessage.getPropertyNames(ActiveMQMessage.java:331) ~[CamelRouter.jar:?]
+	at org.apache.camel.component.jms.JmsBinding.extractHeadersFromJms(JmsBinding.java:221) ~[CamelRouter.jar:?]
+	... 16 more
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:345) ~[?:?]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:594) ~[?:?]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:569) ~[?:?]
+	at org.apache.activemq.util.MarshallingSupport.unmarshalPrimitiveMap(MarshallingSupport.java:97) ~[CamelRouter.jar:?]
+	at org.apache.activemq.util.MarshallingSupport.unmarshalPrimitiveMap(MarshallingSupport.java:78) ~[CamelRouter.jar:?]
+	at org.apache.activemq.util.MarshallingSupport.unmarshalPrimitiveMap(MarshallingSupport.java:70) ~[CamelRouter.jar:?]
+	at org.apache.activemq.command.Message.unmarsallProperties(Message.java:244) ~[CamelRouter.jar:?]
+	at org.apache.activemq.command.Message.getProperties(Message.java:210) ~[CamelRouter.jar:?]
+	at org.apache.activemq.command.ActiveMQMessage.getPropertyNames(ActiveMQMessage.java:316) ~[CamelRouter.jar:?]
+	at org.apache.camel.component.jms.JmsBinding.extractHeadersFromJms(JmsBinding.java:221) ~[CamelRouter.jar:?]
+	... 16 more

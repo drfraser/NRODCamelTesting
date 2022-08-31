@@ -1,0 +1,19 @@
+These files are log files containing examples of the errors seen.
+
+So far, propertyNames array has been one of these:
+
+A. null
+
+B. [0, 0, 0, 1, 0, 14, 116, 114, 97, 110, 115, 102, 111, 114, 109, 97, 116, 105, 111, 110, 9, 0, 7, 106, 109, 115, 45, 120, 109, 108]
+
+C. [0, 0, 0, 2, 0, 14, 116, 114, 97, 110, 115, 102, 111, 114, 109, 97, 116, 105, 111, 110, 9, 0, 7, 106, 109, 115, 45, 120, 109, 108]
+
+D. [0, 0, 0, 1]
+
+The first four bytes are the number of properties in the array, then a UTF-8 string (2 byte length first), then its value (byte for the type, then the data)
+
+In B and C, the property is "transformation" and the value "jms-xml"
+
+The C and D variants will cause ActiveMQ to throw an exception.
+
+

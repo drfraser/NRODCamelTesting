@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Camel XML config for JAR that sends JUST NR TD feeds to a file -->
+<!-- USERNAME,PWD,clientId,durableSubscriptionName,FILEPATH all need to be changed -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+  <bean id="ActiveMQCF" class="org.apache.activemq.ActiveMQConnectionFactory">
+    <property name="brokerURL" value="failover:(tcp://datafeeds.networkrail.co.uk:61619)?jms.useCompression=true&amp;jms.watchTopicAdvisories=false&amp;nested.wireFormat.maxInactivityDuration=30000&amp;initialReconnectDelay=10000&amp;maxReconnectAttempts=3&amp;reconnectDelayExponent=1.5"/>
+    <property name="userName" value="USERNAME"/>
+    <property name="password" value="PWD"/>
+  </bean>
+
+  <bean id="ntrod" class="org.apache.camel.component.activemq.ActiveMQComponent">
+    <property name="connectionFactory" ref="ActiveMQCF"/>
+    <property name="eagerLoadingOfProperties" value="true" />
+    <property name="errorHandlerLoggingLevel" value="TRACE" />
+    <property name="testConnectionOnStartup" value="true" />
+  </bean>
+
+  <camelContext xmlns="http://camel.apache.org/schema/spring">
+    
+    <route id="td">
+      <from uri="ntrod:topic:TD_ALL_SIG_AREA?clientId=__FIXME__&amp;durableSubscriptionName=__FIXME__"/>
+      <to uri="file:FILEPATH/?fileName=./test-td.json&amp;fileExist=Append" />
+    </route>
+
+    <route id="trust">
+      <from uri="ntrod:topic:TRAIN_MVT_ALL_TOC?clientId=__FIXME__&amp;durableSubscriptionName=__FIXME__" />
+      <to uri="file:FILEPATH/?fileName=./test-trust.json&amp;fileExist=Append" />
+    </route>
+
+  </camelContext>
+
+</beans>
